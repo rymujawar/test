@@ -1,0 +1,22 @@
+package day10;
+
+public class Emp1 {
+	public static void main(String args[]) {
+	//class may contains multiple objects:
+	ClassObjectMethos Emp1 = new ClassObjectMethos();
+	Emp1.empId=100;
+//	Emp1.empDes="QA";
+	Emp1.empDes="Riyaj";
+	Emp1.dispay();
+
+	
+//	ClassObjectMethos Emp2=new ClassObjectMethos();
+//	Emp2.empDes="IAS";
+//	Emp2.empId=101;
+//	Emp2.empName="Riyaj Mujawar";
+//	Emp2.dispay();
+	
+}
+	
+
+}

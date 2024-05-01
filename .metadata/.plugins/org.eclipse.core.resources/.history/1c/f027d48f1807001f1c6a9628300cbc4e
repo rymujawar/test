@@ -1,0 +1,27 @@
+package javaPractice;
+
+public class ClassObjectMethos {
+//	class contains variables and methods
+//	variables
+	int empId;
+	String empName;
+	String empDes;
+//	Methods
+	void dispay()
+	{
+		System.out.println(empId);
+		System.out.println(empName);
+		System.out.println(empDes);
+	}
+		public static void main(String args[]) {
+			//class may contains multiple objects:
+			ClassObjectMethos Emp1 = new ClassObjectMethos();
+			Emp1.empId=100;
+			Emp1.empDes="QA";
+			Emp1.empName="Riyaj";
+			Emp1.dispay();
+			
+			ClassObjectMethos Emp2=new ClassObjectMethos();
+			Emp2.empDes="IAS";
+		}
+}

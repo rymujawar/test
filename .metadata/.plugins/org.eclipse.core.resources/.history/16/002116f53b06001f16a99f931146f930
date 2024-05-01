@@ -1,0 +1,44 @@
+package riyaj;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.google.common.base.Verify;
+
+public class FlipkartWindowhandle {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://www.flipkart.com/");
+		driver.manage().window();
+		driver.manage().deleteAllCookies();
+		driver.findElement(By.linkText("About Us")).click();
+
+		Set<String> winIds = driver.getWindowHandles();
+		Iterator<String> it = winIds.iterator();
+		String ChildWinId = it.next();
+		driver.switchTo().window(ChildWinId);
+		String curl = driver.getCurrentUrl();
+		System.out.println(curl);
+		if(curl.equals("https://corporate.flipkart.net/corporate-home\r\n"
+				+ ""))
+		{
+			System.out.println("Test Passed");
+		}
+//		driver.findElement(By.xpath("//a[normalize-space()='Contact Us']")).click();
+
+	}
+
+	private static Verify Verify() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

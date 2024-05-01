@@ -1,0 +1,11 @@
+package day10;
+
+public class Emp2 {
+	void dispay()
+	{
+		System.out.println(empId);
+		System.out.println(empName);
+		System.out.println(empDes);
+	}
+
+}

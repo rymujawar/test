@@ -1,0 +1,58 @@
+package riyaj;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class WindowHandles {
+
+	public static void main(String[] args) throws Exception {
+		ChromeOptions options =new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		WebDriver driver = new ChromeDriver(options);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@class=\"whTextBox\"]/following::div[2]/child::button")).click();
+		
+		String parent=driver.getWindowHandle();
+		System.out.println(parent);
+		
+		Set<String> winIds = driver.getWindowHandles();
+		
+		
+		Iterator<String> it = winIds.iterator();
+		
+		String ChildWinId = it.next();
+		String curl =driver.switchTo().window(ChildWinId).getCurrentUrl();
+		 System.out.println(curl);
+		 driver.switchTo().window(parent);
+		
+		
+//		Set<String>winIds=driver.getWindowHandles();
+//		
+//		for(String winid:winIds)
+//		{
+//			String curl = driver.switchTo().window(winid).getCurrentUrl();
+//			System.out.println(curl);
+//			if(curl.equalsIgnoreCase(curl))
+//			
+//		}
+		
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//a[normalize-space()='YouTube Courses']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='English']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Core Java']")).click();
+		 boolean status = driver.findElement(By.xpath("//h1[normalize-space()='Core Java - English']")).isDisplayed()
+;		System.out.println(status);
+
+
+	}
+
+}

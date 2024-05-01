@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;seleniumTest.Test.java&apos; to &apos;MakeMyTripBookingLinks.java&apos;&#x0D;&#x0A;- Original project: &apos;RiyajTest&apos;&#x0D;&#x0A;- Original element: &apos;seleniumTest.Test.java&apos;&#x0D;&#x0A;- Renamed element: &apos;seleniumTest.MakeMyTripBookingLinks.java&apos;" description="Rename compilation unit &apos;Test.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;seleniumTest{Test.java" name="MakeMyTripBookingLinks.java" references="false" stamp="1713510027596" version="1.0"/>
+</session>

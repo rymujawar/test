@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package riyaj;
+
+/**
+ * 
+ */
+public interface Riyaj {
+	public void R1(int a );
+	
+
+}

@@ -1,0 +1,22 @@
+package testing;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandle {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver =new ChromeDriver();
+//		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.navigate().to("https://www.flipkart.com/");
+		driver.findElement(By.xpath("//div[@class=\"H6-NpN _3N4_BX\"]/a/")).click();
+//		driver.navigate().refresh();
+		driver.findElement(By.xpath("//div[@class=\"_22Dgdy _29BEA8\"]/input")).sendKeys("9011843239");
+		driver.findElement(By.xpath("//button[normalize-space()='Request OTP']")).click();
+		Thread.sleep(10000);
+
+	}
+
+}
