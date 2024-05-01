@@ -4,3 +4,4 @@ public class NewTEST{
 		System.out.println("GitHub");
 	}
 }
+//Note:result should be same as the above
